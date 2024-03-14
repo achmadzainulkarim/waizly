@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "7a9ef61c-1f80-49fb-8ec5-675bcccecc67",
+		"name": "Waizly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31769757"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"admin\",\n    \"password\" : \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/auth/login",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address Get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/api/address/get",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"address",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/api/address/detail/:id",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"address",
+						"detail",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"village\" : \"desa\",\n    \"district\" : \"kecamatan\",\n    \"city\" : \"kabupaten / kota\",\n    \"province\" : \"provinsi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/address/create",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"address",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"village\" : \"desaku\",\n    \"district\" : \"kecamatanku\",\n    \"city\" : \"kabupaten / kotaku\",\n    \"province\" : \"provinsiku\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/address/update/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"address",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"village\" : \"desaku\",\n    \"district\" : \"kecamatanku\",\n    \"city\" : \"kabupaten / kotaku\",\n    \"province\" : \"provinsiku\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/address/update/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"address",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
