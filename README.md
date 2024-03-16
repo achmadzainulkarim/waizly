@@ -11,3 +11,10 @@ This is steps to run this service
 - config `.env` file
 - `npm run db:migrate`
 - `npm run db:seed`
+
+If you want to run dev mode
+- `npm run dev`
+
+If you want to run production mode
+- `npm run build`
+- `npm start`
