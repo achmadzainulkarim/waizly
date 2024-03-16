@@ -18,3 +18,6 @@ If you want to run dev mode
 If you want to run production mode
 - `npm run build`
 - `npm start`
+
+## Testing
+Please import postman collection on src/docs/Waizly.postman_collection.json and kindly test locally
